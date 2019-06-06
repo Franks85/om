@@ -58,7 +58,7 @@ const mapPopup = () => {
   return (
     <Wrapper id="popup">
       <PopupBox>
-        <PopupCloseIcon href='/#contact-section'>&times;</PopupCloseIcon>
+        <PopupCloseIcon href='/#contatti'>&times;</PopupCloseIcon>
         <iframe
           width="80%"
           height="460"

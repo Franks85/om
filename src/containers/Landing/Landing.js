@@ -14,7 +14,7 @@ class Landing extends Component {
         <HouseSection />
         <InterSection />
         <RoomsSection />
-        <ContactSection />
+        <ContactSection mapHref='#popup'/>
         <MapPopup />
       </div>
     );

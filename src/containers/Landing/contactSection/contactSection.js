@@ -62,9 +62,16 @@ const ContactInfoRef = styled.p`
   `};
 `;
 
+const Address = styled(ContactInfoRef)`
+  font-size: 1.5rem;
+  font-weight: normal;
+
+`;
+
 const ContactInfoContent = styled.span`
   margin: 0 1rem;
-  color: #ffb900;
+  color: #00bca7;
+  letter-spacing: .15rem;
 `;
 
 const FacebookLink = styled.a`
@@ -84,30 +91,31 @@ const ContactBoxButton = styled(AnimatedButton)`
   margin-top: 4rem;
 `;
 
-const contactSection = () => {
+const contactSection = props => {
+  const {mapHref} = props;
   return (
     <Wrapper id="contatti">
       <ContactContainer>
         <ContactBox>
           <SectionTitle>Contatti</SectionTitle>
           <ContactInfoRef>
-            <i className="material-icons">call</i>
-            <ContactInfoContent>3409085650 ( Roberto )</ContactInfoContent>
+            <i className="material-icons">Tel:</i>
+            <ContactInfoContent>3408877650 ( Roberto )</ContactInfoContent>
           </ContactInfoRef>
           <ContactInfoRef>
-            <i className="material-icons">email</i>
+            <i className="material-icons">email:</i>
             <ContactInfoContent>orizzontemar@gmail.com</ContactInfoContent>
           </ContactInfoRef>
           <ContactInfoRef>
-            <i className="material-icons">home</i>
+            <i className="material-icons">Facebook:</i>
             <ContactInfoContent>
               <FacebookLink href="#">Orizzonte Marino &rarr;</FacebookLink>
             </ContactInfoContent>
           </ContactInfoRef>
-          <ContactInfoRef>
-            Via Camposanto Vecchio 14, Senigallia ( an )
-          </ContactInfoRef>
-          <ContactBoxButton primary href="#popup">
+          <Address>
+            Strada del Camposanto Vecchio 14, Senigallia ( an )
+          </Address>
+          <ContactBoxButton primary href={mapHref}>
             Guarda la mappa &rarr;
           </ContactBoxButton>
         </ContactBox>

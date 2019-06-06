@@ -221,6 +221,9 @@ const MobileContentText = styled.p`
 const CardSideBackContentButton = styled(AnimatedButton)`
   color: #999;
   font-weight: bolder;
+  &:hover {
+    color: #999;
+  }
 `;
 
 const MobileContentButton = styled.a`

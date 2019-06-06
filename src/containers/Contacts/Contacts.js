@@ -5,12 +5,12 @@ import { NavBar, NavBarHeading } from "../../styledComponents/styledComponents";
 
 const Contatcts = () => {
   return (
-    <div style={{ height: "100vh" }}>
+    <div>
       <Navigation />
       <NavBar>
         <NavBarHeading>Contatti</NavBarHeading>
       </NavBar>
-      <ContactSection />
+      <ContactSection mapHref='/#popup'/>
     </div>
   );
 };
