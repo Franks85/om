@@ -5,7 +5,6 @@ import InterSection from './interSection/interSection';
 import RoomsSection from './roomsSection/roomsSection';
 import ContactSection from './contactSection/contactSection';
 import MapPopup from './mapPopup/mapPopup';
-import Footer from '../../components/Navigation/footer'
 
 class Landing extends Component {
   render() {
@@ -17,7 +16,6 @@ class Landing extends Component {
         <RoomsSection />
         <ContactSection />
         <MapPopup />
-        <Footer />
       </div>
     );
   }

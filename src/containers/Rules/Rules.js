@@ -7,17 +7,14 @@ import {
 } from "../../styledComponents/styledComponents";
 import { media } from "../../styledComponents/mediaQueryHelper";
 import { rulesData } from "./rulesData";
-import Footer from '../../components/Navigation/footer'
-import Navigation from '../../components/Navigation/mobileNavigation'
+import Navigation from "../../components/Navigation/mobileNavigation";
 
-const Wrapper = styled.div`
-  
-`;
+const Wrapper = styled.div``;
 
 const NavBarTitle = styled(NavBarHeading)`
   ${media.lessThan("phone")`
-    font-size: 3rem;
-    padding: 2rem;
+    font-size: 3.5rem;
+    padding-top: 3rem;
   `};
 `;
 
@@ -58,7 +55,7 @@ const Rules = () => {
   });
   return (
     <Wrapper>
-    <Navigation />
+      <Navigation />
       <NavBar>
         <NavBarTitle>Regolamento</NavBarTitle>
       </NavBar>
@@ -81,7 +78,6 @@ const Rules = () => {
           soggiorno!
         </RulesHeading>
       </RulesBox>
-      <Footer />
     </Wrapper>
   );
 };

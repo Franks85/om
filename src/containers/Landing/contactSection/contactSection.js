@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components';
-import contactImg from './img/beach.jpg';
+import React from "react";
+import styled from "styled-components";
+import contactImg from "./img/beach.jpg";
 import {
   SectionTitle,
   AnimatedButton
 } from "../../../styledComponents/styledComponents";
-import { media } from '../../../styledComponents/mediaQueryHelper';
-import withReveal from 'react-reveal/withReveal';
+import { media } from "../../../styledComponents/mediaQueryHelper";
+import withReveal from "react-reveal/withReveal";
 import Zoom from "react-reveal/Zoom";
 
 const Wrapper = styled.div`
@@ -33,17 +33,20 @@ const ContactContainer = styled.div`
   `};
 `;
 
-const ContactBox = withReveal(styled.div`
-   width: 50%;
-  padding: 2rem 3rem;
-  position: relative;
-  ${media.lessThan("tabPort")`
+const ContactBox = withReveal(
+  styled.div`
+    width: 50%;
+    padding: 2rem 3rem;
+    position: relative;
+    ${media.lessThan("tabPort")`
     width: 70%;
   `};
-  ${media.lessThan("phone")`
+    ${media.lessThan("phone")`
     width: 100%;
   `};
-`, <Zoom delay={500}/>);
+  `,
+  <Zoom delay={500} />
+);
 
 const ContactInfoRef = styled.p`
   font-size: 1.7rem;
@@ -66,12 +69,13 @@ const ContactInfoContent = styled.span`
 
 const FacebookLink = styled.a`
   text-decoration: none;
-  &:link, :visited {
+  &:link,
+  :visited {
     color: #ffb900;
   }
   &:hover {
     color: #ff8469;
-    text-shadow: 0 .5rem 1rem rgba(249, 131, 100, 0.4);
+    text-shadow: 0 0.5rem 1rem rgba(249, 131, 100, 0.4);
   }
 `;
 
@@ -82,19 +86,34 @@ const ContactBoxButton = styled(AnimatedButton)`
 
 const contactSection = () => {
   return (
-    <Wrapper id='contatti'>
-        <ContactContainer>
-          <ContactBox>
-            <SectionTitle>Contatti</SectionTitle>
-            <ContactInfoRef><i className="material-icons">call</i><ContactInfoContent>3409085650 ( Roberto )</ContactInfoContent></ContactInfoRef>
-            <ContactInfoRef><i className="material-icons">email</i><ContactInfoContent>orizzontemar@gmail.com</ContactInfoContent></ContactInfoRef>
-            <ContactInfoRef><i className="material-icons">home</i><ContactInfoContent><FacebookLink href='#'>Orizzonte Marino &rarr;</FacebookLink></ContactInfoContent></ContactInfoRef>
-            <ContactInfoRef>Via Camposanto Vecchio 14, Senigallia ( an )</ContactInfoRef>
-            <ContactBoxButton primary href='#popup'>Guarda la mappa &rarr;</ContactBoxButton>
-          </ContactBox>
-        </ContactContainer>
+    <Wrapper id="contatti">
+      <ContactContainer>
+        <ContactBox>
+          <SectionTitle>Contatti</SectionTitle>
+          <ContactInfoRef>
+            <i className="material-icons">call</i>
+            <ContactInfoContent>3409085650 ( Roberto )</ContactInfoContent>
+          </ContactInfoRef>
+          <ContactInfoRef>
+            <i className="material-icons">email</i>
+            <ContactInfoContent>orizzontemar@gmail.com</ContactInfoContent>
+          </ContactInfoRef>
+          <ContactInfoRef>
+            <i className="material-icons">home</i>
+            <ContactInfoContent>
+              <FacebookLink href="#">Orizzonte Marino &rarr;</FacebookLink>
+            </ContactInfoContent>
+          </ContactInfoRef>
+          <ContactInfoRef>
+            Via Camposanto Vecchio 14, Senigallia ( an )
+          </ContactInfoRef>
+          <ContactBoxButton primary href="#popup">
+            Guarda la mappa &rarr;
+          </ContactBoxButton>
+        </ContactBox>
+      </ContactContainer>
     </Wrapper>
-)
-  }
+  );
+};
 
-export default contactSection
+export default contactSection;

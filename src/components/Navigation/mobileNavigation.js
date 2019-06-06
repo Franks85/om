@@ -25,6 +25,9 @@ const MenuButton = styled.button`
   &:hover,
   &:active {
     background-color: #e6fafc;
+    ${media.lessThan("tabPort")`
+    background-color: transparent;
+  `};
   }
   ${media.lessThan("tabPort")`
       top: 0;

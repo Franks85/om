@@ -13,7 +13,7 @@ export const menuData = [
   },
   {
     label: "contatti",
-    url: "/#contatti"
+    url: "/contatti"
   }
 ];
 

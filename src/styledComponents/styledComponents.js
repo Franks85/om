@@ -70,6 +70,7 @@ const AnimatedButton = styled.a`
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: #fff;
     &:after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
